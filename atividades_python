@@ -1,0 +1,317 @@
+Python — Introdução à Lógica de Programação
+Lista de Atividades Práticas
+Unidades I a VI
+
+
+
+
+Organização do Material
+
+
+Conteúdo
+Tipo
+Lista 1
+6 Atividades — uma por unidade temática
+Exercícios Individuais
+Lista 2
+Projeto Integrador — Sistema de Gerenciamento de Alunos
+Projeto Completo
+
+
+
+Lista 1
+Lista 1 — Atividades por Unidade
+Uma atividade prática para cada unidade temática da disciplina
+
+
+Visão Geral das Atividades
+Unidade
+Tema
+Atividade
+Conceitos-Chave
+Unidade I
+Variáveis, Entrada e Saída de Dados
+Ficha de Cadastro Pessoal
+Variáveis, tipos de dados, input(), print(), formatação de string (f-string)
+Unidade II
+Operadores Aritméticos, Relacionais e Lógicos
+Calculadora de IMC
+Operadores aritméticos (**,  /), operadores relacionais (>, <, ==), conversão de tipos
+Unidade III
+Estrutura de Decisão
+Sistema de Notas e Situação do Aluno
+if, elif, else, operadores lógicos (and, or), estruturas aninhadas
+Unidade IV
+Laço de Repetição
+Tabuada Interativa
+for, while, range(), break, continue, contador de iterações
+Unidade V
+Listas e Matrizes
+Gerenciador de Lista de Compras
+list, append(), remove(), index(), in, len(), laço for sobre lista
+Unidade VI
+Funções
+Calculadora Modular
+def, parâmetros, return, chamada de funções, tratamento de erro com if
+
+
+Unidade I
+Atividade 1
+Ficha de Cadastro Pessoal
+Variáveis, Entrada e Saída de Dados
+
+
+
+
+Objetivo
+Coletar dados do usuário via input() e exibir formatado com print().
+
+
+
+
+O que fazer
+1
+Solicitar ao usuário: nome, idade, cidade e curso.
+2
+Armazenar cada dado em uma variável com tipo adequado (str, int).
+3
+Exibir uma 'ficha' formatada com todos os dados coletados.
+4
+Mostrar também uma mensagem personalizada de boas-vindas.
+
+
+Conceitos Trabalhados
+Variáveis, tipos de dados, input(), print(), formatação de string (f-string)
+
+
+Unidade II
+Atividade 2
+Calculadora de IMC
+Operadores Aritméticos, Relacionais e Lógicos
+
+
+
+
+Objetivo
+Aplicar operadores aritméticos e relacionais para calcular e classificar o IMC.
+
+
+
+
+O que fazer
+1
+Receber peso (float) e altura (float) do usuário.
+2
+Calcular o IMC usando a fórmula: IMC = peso / (altura ** 2).
+3
+Usar operadores relacionais para classificar o resultado.
+4
+Exibir o valor calculado e a classificação (Abaixo do peso, Normal, Sobrepeso, Obesidade).
+
+
+Conceitos Trabalhados
+Operadores aritméticos (**,  /), operadores relacionais (>, <, ==), conversão de tipos
+
+
+Unidade III
+Atividade 3
+Sistema de Notas e Situação do Aluno
+Estrutura de Decisão
+
+
+
+
+Objetivo
+Usar if, elif e else para determinar a situação acadêmica de um aluno.
+
+
+
+
+O que fazer
+1
+Receber as notas de 3 provas e calcular a média.
+2
+Verificar se o aluno está Aprovado (média >= 7), em Recuperação (>= 5) ou Reprovado (< 5).
+3
+Se em recuperação, solicitar a nota da prova final e recalcular.
+4
+Exibir a situação final com a média formatada com 2 casas decimais.
+
+
+Conceitos Trabalhados
+if, elif, else, operadores lógicos (and, or), estruturas aninhadas
+
+
+Unidade IV
+Atividade 4
+Tabuada Interativa
+Laço de Repetição
+
+
+
+
+Objetivo
+Usar for e while para gerar tabuadas e controlar repetições com entrada do usuário.
+
+
+
+
+O que fazer
+1
+Exibir um menu perguntando qual número o usuário quer ver a tabuada.
+2
+Usar um laço for para imprimir a tabuada de 1 a 10 do número escolhido.
+3
+Usar um laço while para repetir o programa até o usuário digitar 0 para sair.
+4
+Contar e exibir quantas tabuadas foram consultadas na sessão.
+
+
+Conceitos Trabalhados
+for, while, range(), break, continue, contador de iterações
+
+
+Unidade V
+Atividade 5
+Gerenciador de Lista de Compras
+Listas e Matrizes
+
+
+
+
+Objetivo
+Manipular listas dinamicamente com operações de inserção, remoção e busca.
+
+
+
+
+O que fazer
+1
+Criar uma lista vazia e exibir um menu com opções: Adicionar, Remover, Buscar, Ver todos, Sair.
+2
+Ao adicionar, incluir o item na lista e exibir a lista atualizada.
+3
+Ao remover, verificar se o item existe antes de removê-lo.
+4
+Ao buscar, informar se o item está ou não na lista (e em qual posição).
+
+
+Conceitos Trabalhados
+list, append(), remove(), index(), in, len(), laço for sobre lista
+
+
+Unidade VI
+Atividade 6
+Calculadora Modular
+Funções
+
+
+
+
+Objetivo
+Organizar operações matemáticas em funções reutilizáveis com parâmetros e retorno.
+
+
+
+
+O que fazer
+1
+Criar funções separadas para: somar, subtrair, multiplicar, dividir e calcular potência.
+2
+Cada função deve receber 2 parâmetros e retornar o resultado.
+3
+A função de divisão deve tratar divisão por zero com uma mensagem de erro.
+4
+Criar uma função principal que exibe o menu e chama as demais conforme a escolha do usuário.
+
+
+Conceitos Trabalhados
+def, parâmetros, return, chamada de funções, tratamento de erro com if
+
+
+
+Lista 2 — Projeto Integrador
+Aplicação única que une todos os conceitos do semestre
+
+
+Sistema de Gerenciamento de Alunos
+
+
+Objetivo do Projeto
+Desenvolver um sistema de cadastro e controle acadêmico que simule funcionalidades reais de um sistema escolar, aplicando todos os conceitos estudados no semestre.
+
+
+
+
+Contexto e Cenário Real
+Uma escola pequena precisa de um sistema simples via terminal para cadastrar alunos, registrar notas e gerar relatórios básicos. O sistema deve rodar em loop até o usuário optar por sair.
+
+
+Funcionalidades a Implementar
+ID
+Funcionalidade
+Unidades
+Descrição
+F1
+Cadastrar Aluno
+I, VI
+Função cadastrar_aluno() solicita nome, idade e turma via input() e armazena em uma lista de dicionários.
+F2
+Registrar Notas
+I, II, VI
+Função registrar_notas() recebe o nome do aluno e 3 notas (float), calcula a média com operadores aritméticos e atualiza o cadastro.
+F3
+Verificar Situação
+III, VI
+Função verificar_situacao() usa if/elif/else para retornar Aprovado, Recuperação ou Reprovado com base na média calculada.
+F4
+Listar Todos os Alunos
+IV, V, VI
+Função listar_alunos() percorre a lista de alunos com for, exibindo nome, média e situação de cada um formatados.
+F5
+Buscar Aluno
+IV, V, VI
+Função buscar_aluno() percorre a lista com for/while, compara nomes e retorna os dados do aluno ou uma mensagem de não encontrado.
+F6
+Gerar Relatório da Turma
+II, IV, V, VI
+Função relatorio_turma() calcula: total de alunos, maior e menor média (operadores relacionais), e percentual de aprovados usando laços e listas.
+F7
+Menu Principal (Loop)
+III, IV
+Loop while True exibe menu numerado. Usa if/elif para direcionar para cada função. Encerra com a opção 0 usando break.
+
+
+Estrutura de Dados Sugerida
+1
+alunos = []  — lista principal que armazena dicionários de cada aluno
+2
+Cada aluno é um dict: {'nome': str, 'idade': int, 'turma': str, 'notas': list, 'media': float, 'situacao': str}
+3
+Todas as operações são realizadas por funções independentes e reutilizáveis
+4
+O menu principal chama as funções conforme a escolha do usuário em loop contínuo
+
+
+Mapa de Conteúdos Utilizados no Projeto
+Unidade
+Como é utilizada no projeto
+Unidade I
+input() e print() em todas as funções de coleta e exibição de dados
+Unidade II
+Cálculo de médias, comparações de notas e percentuais no relatório
+Unidade III
+if/elif/else para classificar situação do aluno e tratar menu
+Unidade IV
+while True no menu principal, for para percorrer lista de alunos
+Unidade V
+Lista de alunos (dicionários), append(), busca por índice, len()
+Unidade VI
+Todas as funcionalidades encapsuladas em funções com parâmetros e return
+
+
+Dica para o Projeto
+Comece implementando o Menu Principal com o loop while e as opcoes. Em seguida, crie cada funcao de forma isolada e va testando uma por vez. So integre ao menu depois que a funcao estiver funcionando corretamente. Isso facilita muito a identificacao de erros.
+Sugestao de ordem de implementacao: F7 (Menu) → F1 (Cadastrar) → F4 (Listar) → F2 (Notas) → F3 (Situacao) → F5 (Buscar) → F6 (Relatorio)
+
+
