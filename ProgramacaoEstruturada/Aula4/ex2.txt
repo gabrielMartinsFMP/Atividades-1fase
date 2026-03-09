@@ -1,0 +1,14 @@
+n = 5 - 10 (-5)
+c1 = -10 > n (-10 > -5 = false) 
+c2 = -15 > n (-15 > -5 = false)
+r1 = c1 or c2 (false)
+r2 = c1 and c2 (false)
+f, f,
+f, f
+
+n = -10 % 2 (0)
+c1 = 9 > n (9 > 0 = true)
+c2 = 0 > n (0 > 0 = false)
+r1 = not c1 and c2 (!true and false = false)
+r2 = c1 or not c2 (true or true = true )
+t, f, f, t
