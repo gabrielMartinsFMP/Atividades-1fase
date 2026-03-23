@@ -1,11 +1,7 @@
-import math
+valor =  float(input("Valor: "))
 
-conta = float(input('Valor total da conta: R$ '))
+conta = int(valor // 3)
 
-carlos = math.floor(conta / 3)
-andre = math.floor(conta / 3)
-felipe = conta - carlos - andre
+felipe = valor - (conta * 2)
 
-print(f'Carlos paga: R$ {carlos:.2f}')
-print(f'André paga: R$ {andre:.2f}')
-print(f'Felipe paga: R$ {felipe:.2f}')
+print(f'parte carlos: {conta} \n parte andre: {conta} \n parte felipe: {felipe}')
