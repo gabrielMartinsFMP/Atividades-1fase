@@ -1,9 +1,7 @@
-valorInicial = int(input('Valor inicial: '))
+valor = int(input('Valor inicial: '))
 
+resultado = 1
 
-fatorial = 1
-
-for i in range(1, valorInicial + 1):
-    fatorial = fatorial * i
-
-print(fatorial)
+for i in range(valor, 0, -1):
+    resultado = resultado * i
+    print(resultado)
