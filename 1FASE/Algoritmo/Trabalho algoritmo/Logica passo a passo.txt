@@ -1,0 +1,279 @@
+Texto:
+1. Luiza viveu dois anos a menos em uma das capitais do que a pessoa que passou um tempo em São Paulo. Luíza não viveu em Recife.
+
+
+2. Renato morou durante três anos no Rio de Janeiro.
+
+
+3. A pessoa que foi para Maceió, que não é Luíza, chegou à capital onde morou um ano antes da contratação de Renato, mas um ano depois da pessoa cujo contrato terminou em 2001.
+
+
+4. João deixou a capital onde ensinou inglês um ano antes da pessoa que morou em Recife, mas um ano depois da pessoa contratada em 1995.
+
+
+5. A pessoa contratada pelo curso até 1999(partida) chegou em uma das capitais dois anos depois do que a pessoa que foi para São Paulo, mas um ano antes do que Irene.
+
+
+6. A pessoa que viveu em Curitiba(Luiza) chegou em 1993.
+
+
+Tabela de base:
+
+
+________________
+
+
+Passo 1 - Primeiro Texto:
+"Luiza viveu dois anos a menos em uma das capitais do que a pessoa que passou um tempo em São Paulo. Luíza não viveu em Recife."
+
+
+O que é possível interpretar do texto:
+
+
+* Luiza viveu -2 anos do que o professor de São Paulo
+* Luiza não viveu em São Paulo (Partindo do principio de que só poderíamos ter 1 prof por cap)
+* Luiza não viveu em Recife.
+
+
+Ainda não é possivel demarcar uma certeza, mas sabemos que luiza não viveu nas duas capitais citadas, então registramos na tabela.
+A relação "-2 anos de duração comparado ao professor de São Paulo" será utilizada em um passo futuro para determinar a partida de Luíza.
+
+
+Passo 2 - Segundo Texto:
+"Renato morou durante três anos no Rio de Janeiro."
+
+
+O que é possível interpretar do texto:
+
+
+* Renato = Rio de Janeiro
+* Renato morou = 3 anos (duração: Partida - Chegada = 3)
+
+
+Um ponto a se notar, como partimos do princípio que só poderíamos ter 1 prof por cap, ao definir a capital de um professor como true, todos os campos desta capital para outros professores serão false.
+A informação dos 3 anos de duração será utilizada em um passo futuro para determinar quando Renato chegou e partiu.
+
+
+Passo 3 - Terceiro Texto:
+"A pessoa que foi para Maceió, que não é Luíza, chegou à capital onde morou um ano antes da contratação do Renato, mas um ano depois da pessoa cujo contrato terminou em 2001."
+
+
+O que é possível interpretar do texto:
+
+
+* Professor Maceió != Luiza
+* Chegada de Maceió = Chegada de Renato - 1
+* Chegada de Maceió = Chegada do professor com Partida 2001 + 1
+
+
+Apesar de não conseguirmos anotar alguma informação sobre quem morou em maceio, percebemos mais um campo false para Luiza, sobrando somente um campo e indicando que Luiza foi professora em Curitiba e eliminando essa possibilidade para outros professores.
+As relações temporais deste texto (Maceió = Renato-1 e Maceió = prof.Partida2001 + 1) serão resolvidas nos passos 9 e 10.
+
+
+Passo 4 - Quarto Texto:
+"João deixou a capital onde ensinou inglês um ano antes da pessoa que morou em Recife, mas um ano depois da pessoa contratada em 1995."
+
+
+O que é possível interpretar do texto:
+
+
+* Partida de João = Partida do professor de Recife - 1
+* Partida de João = Partida do professor com Chegada 1995 + 1
+
+
+Anotamos que João não morou em recife, sobrando somente duas possibilidades para o mesmo, Maceió e São Paulo.
+As relações temporais de partida serão resolvidas no passo 10.
+
+
+Passo 5 - Quinto Texto:
+"A pessoa contratada pelo curso até 1999(partida) chegou em uma das capitais dois anos depois do que a pessoa que foi para São Paulo, mas um ano antes do que Irene."
+
+
+O que é possível interpretar do texto:
+
+
+* Chegada do professor com Partida 1999 = Chegada de São Paulo + 2
+* Chegada de Irene = Chegada do professor com Partida 1999 + 1
+* Irene != São Paulo
+
+
+Sobra-se 2 opções para irene, maceió e recife.
+A cadeia temporal (SP → SP+2 → Irene) será resolvida no passo 7 após confirmar a chegada de Luíza.
+
+
+Passo 6 - Sexto Texto:
+"A pessoa que viveu em Curitiba(Luiza) chegou em 1993."
+
+
+O que é possível interpretar do texto:
+
+
+* Luiza chegou em Curitiba em 1993 → Luíza: Chegada 1993 = TRUE
+
+
+ATENÇÃO - Erro identificado e corrigido: Na marcação inicial deste passo foi registrado o TRUE de Chegada 1993 na linha de Irene por engano. O correto é marcar na linha de Luíza.
+
+
+Registra-se na tabela:
+* Luíza: Chegada 1993 = TRUE
+* Irene, João, Marcos, Renato: Chegada 1993 = FALSE
+* Luíza: Chegada 1994, 1995, 1996, 1997 = FALSE (confirmada em 1993)
+* Seção inferior - Chegada 1993: Curitiba = TRUE, demais capitais = FALSE
+* Seção inferior - Chegada 1994 a 1997: Curitiba = FALSE
+
+
+Passo 7 - Retornando ao Quinto Texto:
+"A pessoa contratada pelo curso até 1999(partida) chegou em uma das capitais dois anos depois do que a pessoa que foi para São Paulo, mas um ano antes do que Irene."
+
+
+Agora sabendo que Luíza chegou em 1993, existem somente outras 4 possibilidades de chegada: 1994, 1995, 1996 e 1997.
+A cadeia é: São Paulo → +2 anos → pessoa com Partida 1999 → +1 ano → Irene.
+
+Esta pessoa (Partida 1999) chegou 2 anos depois de São Paulo e 1 ano antes de Irene.
+Nota-se que só seria possível esta pessoa chegar em 1996, pois:
+- Chegou 1 ano antes de Irene → Irene chegou em 1997
+- Chegou 2 anos depois de São Paulo → São Paulo chegou em 1994
+- Não poderia ser antes pois Luíza ocupa 1993
+- Não poderia ser depois pois só temos campos até 1997
+
+
+Conclusões:
+* São Paulo: Chegada = 1994
+* Pessoa com Partida 1999: Chegada = 1996 (capital ainda desconhecida)
+* Irene: Chegada = 1997
+
+
+Registra-se na tabela:
+* Irene: Chegada 1997 = TRUE, Chegada 1993/1994/1995/1996 = FALSE
+* Irene, João, Luíza, Marcos, Renato: Chegada 1997 = FALSE (exceto Irene)
+* Seção inferior - Chegada 1994: São Paulo = TRUE, demais capitais = FALSE
+* Seção inferior - Chegada 1995/1996/1997: São Paulo = FALSE
+
+
+Passo 8 - Retornando ao Segundo Texto:
+"Renato morou durante três anos no Rio de Janeiro."
+
+
+A pessoa que chegou em 1996 partiu em 1999, ou seja, ficou exatamente 3 anos.
+Renato morou 3 anos no Rio de Janeiro. Portanto, Renato é a pessoa que chegou em 1996 e partiu em 1999!
+
+Duração de Renato: Partida - Chegada = 1999 - 1996 = 3 anos ✓
+
+
+Conclusões:
+* Renato: Chegada = 1996, Partida = 1999
+
+
+Registra-se na tabela:
+* Renato: Chegada 1996 = TRUE, Chegada 1993/1994/1995/1997 = FALSE
+* Irene, João, Luíza, Marcos: Chegada 1996 = FALSE
+* Seção inferior - Chegada 1996: Rio de Janeiro = TRUE, demais capitais = FALSE
+* Seção inferior - Partida 1999: Rio de Janeiro = TRUE, demais capitais = FALSE
+
+
+Passo 9 - Retornando ao Terceiro Texto:
+"A pessoa que foi para Maceió, que não é Luíza, chegou à capital onde morou um ano antes da contratação de Renato, mas um ano depois da pessoa cujo contrato terminou em 2001."
+
+
+Agora que sabemos que Renato chegou em 1996:
+* Chegada de Maceió = Chegada de Renato - 1 = 1996 - 1 = 1995
+
+
+Anos de chegada já definidos: 1993 (Luíza/Curitiba), 1994 (São Paulo), 1995 (Maceió), 1996 (Renato/Rio), 1997 (Irene).
+Por eliminação, o único ano restante para Recife é 1997.
+Como Irene chegou em 1997 e Recife chegou em 1997 → Irene = Recife!
+
+
+Adicionalmente, como Irene = Recife e João só pode ser Maceió ou São Paulo (Passo 4), e São Paulo chegou em 1994:
+* Se João = Maceió: João teria chegado em 1995. Mas o Texto 4 diz que João partiu 1 ano depois do professor com Chegada 1995 — o que geraria uma contradição (João não pode partir 1 ano depois de si mesmo).
+* Portanto: João = São Paulo (Chegada 1994) e Marcos = Maceió (Chegada 1995)
+
+
+Conclusões:
+* Maceió: Chegada = 1995 → Marcos = Maceió
+* Recife: Chegada = 1997 → Irene = Recife
+* João = São Paulo (Chegada 1994)
+
+
+Registra-se na tabela:
+* Marcos: Capital Maceió = TRUE, demais = FALSE; Chegada 1995 = TRUE
+* Irene: Capital Recife = TRUE, demais = FALSE
+* João: Capital São Paulo = TRUE, demais = FALSE; Chegada 1994 = TRUE
+* Seção inferior - Chegada 1995: Maceió = TRUE, demais = FALSE
+* Seção inferior - Chegada 1997: Recife = TRUE, demais = FALSE
+
+
+Passo 10 - Retornando ao Terceiro e Quarto Texto:
+
+
+Do Terceiro Texto (segunda parte):
+"...mas um ano depois da pessoa cujo contrato terminou em 2001."
+* Chegada de Maceió = Chegada do professor com Partida 2001 + 1
+* 1995 = Chegada do professor com Partida 2001 + 1
+* Chegada do professor com Partida 2001 = 1994 → esse professor é João (São Paulo)
+* Portanto: João: Partida = 2001
+
+
+Do Quarto Texto:
+"João deixou a capital onde ensinou inglês um ano antes da pessoa que morou em Recife, mas um ano depois da pessoa contratada em 1995."
+* Partida de João = Partida de Irene (Recife) - 1 → 2001 = Partida de Irene - 1 → Irene: Partida = 2002
+* Partida de João = Partida de Marcos (Chegada 1995) + 1 → 2001 = Partida de Marcos + 1 → Marcos: Partida = 2000
+
+
+Conclusões:
+* João: Partida = 2001
+* Marcos: Partida = 2000
+* Irene: Partida = 2002
+
+
+Registra-se na tabela:
+* Seção inferior - Partida 2001: São Paulo = TRUE, demais = FALSE
+* Seção inferior - Partida 2000: Maceió = TRUE, demais = FALSE
+* Seção inferior - Partida 2002: Recife = TRUE, demais = FALSE
+* Professores: João Partida 2001 = TRUE; Marcos Partida 2000 = TRUE; Irene Partida 2002 = TRUE
+
+
+Passo 11 - Retornando ao Primeiro Texto:
+"Luiza viveu dois anos a menos em uma das capitais do que a pessoa que passou um tempo em São Paulo."
+
+
+A relação é de DURAÇÃO (tempo de permanência), não de ano de partida diretamente.
+* Duração = Partida - Chegada
+* João (São Paulo): 2001 - 1994 = 7 anos
+* Luíza viveu 2 anos a menos: 7 - 2 = 5 anos
+* Luíza: Chegada 1993 + 5 anos = Partida 1998
+
+
+ATENÇÃO - Erro comum: NÃO se subtrai 2 do ano de partida de São Paulo (2001 - 2 = 1999, isso está errado).
+O cálculo correto é sobre a duração: (Partida_SP - Chegada_SP) - 2 = Duração_Luíza, e depois Chegada_Luíza + Duração_Luíza = Partida_Luíza.
+
+
+Conclusão:
+* Luíza: Partida = 1998
+
+
+Registra-se na tabela:
+* Seção inferior - Partida 1998: Curitiba = TRUE, demais = FALSE
+* Luíza: Partida 1998 = TRUE
+
+
+________________
+
+RESULTADO FINAL:
+
+Professor  | Capital        | Chegada | Partida
+-----------|----------------|---------|--------
+Luíza      | Curitiba       | 1993    | 1998
+João       | São Paulo      | 1994    | 2001
+Marcos     | Maceió         | 1995    | 2000
+Renato     | Rio de Janeiro | 1996    | 1999
+Irene      | Recife         | 1997    | 2002
+
+
+Verificação de todos os textos:
+1. Luíza durou 5 anos, João/SP durou 7 anos → diferença de 2 ✓ | Luíza = Curitiba ≠ Recife ✓
+2. Renato no Rio de Janeiro, 1999 - 1996 = 3 anos ✓
+3. Marcos/Maceió chegou 1995 = Renato(1996) - 1 ✓ | 1995 = João/Partida2001(Chegada 1994) + 1 ✓
+4. João(2001) = Irene/Recife(2002) - 1 ✓ | João(2001) = Marcos/Chegada1995(Partida 2000) + 1 ✓
+5. Renato/Partida1999 chegou 1996 = João/SP(1994) + 2 ✓ | Irene(1997) = 1996 + 1 ✓
+6. Luíza/Curitiba chegou 1993 ✓
