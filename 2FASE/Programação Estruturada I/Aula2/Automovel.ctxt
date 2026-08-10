@@ -1,0 +1,17 @@
+#BlueJ class context
+#Mon Aug 10 09:32:43 BRT 2026
+comment0.target=Automovel
+comment0.text=\r\n Escreva uma descri\u00E7\u00E3o da classe Computador aqui.\r\n \r\n @author (seu nome) \r\n @version (um n\u00FAmero da vers\u00E3o ou uma data)\r\n
+comment1.params=marca modelo ano
+comment1.target=Automovel(java.lang.String, java.lang.String, int)
+comment2.target=java.lang.String getMarca()
+comment3.params=marca
+comment3.target=void setMarca(java.lang.String)
+comment4.target=java.lang.String getModelo()
+comment5.params=modelo
+comment5.target=void setModelo(java.lang.String)
+comment6.target=int getAno()
+comment7.params=ano
+comment7.target=void setAno(int)
+comment8.target=void exibeDados()
+numComments=9
