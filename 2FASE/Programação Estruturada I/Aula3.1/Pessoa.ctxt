@@ -1,0 +1,12 @@
+#BlueJ class context
+#Mon Aug 17 11:06:35 BRT 2026
+comment0.target=Pessoa
+comment1.params=n i
+comment1.target=Pessoa(java.lang.String, int)
+comment2.params=novoNome
+comment2.target=void setNome(java.lang.String)
+comment3.target=java.lang.String getNome()
+comment4.target=int getIdade()
+comment5.target=void fazAniversario()
+comment6.target=void exibeDados()
+numComments=7
