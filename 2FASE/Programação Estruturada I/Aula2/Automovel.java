@@ -53,7 +53,7 @@ public class Automovel
         this.ano = ano;
     }
     
-    public void exibeDados()
+    public void exibirDados()
     {
         System.out.println("Marca: " + marca);
         System.out.println("Modelo: " + modelo);

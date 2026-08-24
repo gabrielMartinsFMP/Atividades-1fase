@@ -27,7 +27,7 @@ public class Pessoa
 
      public String getDataNascimento()
     {
-        return nome;
+        return dataNascimento;
     }
 
     public void setDataNascimento(Data dataNascimento)

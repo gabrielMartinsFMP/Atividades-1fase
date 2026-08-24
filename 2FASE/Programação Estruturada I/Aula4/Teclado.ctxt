@@ -1,0 +1,11 @@
+#BlueJ class context
+#Mon Aug 24 09:12:24 BRT 2026
+comment0.target=Teclado
+comment0.text=\r\n Classe utilit\u00E1ria para leitura de dados digitados pelo usu\u00E1rio.\r\n\r\n @author (seu nome)\r\n @version (um n\u00FAmero da vers\u00E3o ou uma data)\r\n
+comment1.params=mensagem
+comment1.target=int leInt(java.lang.String)
+comment1.text=\r\n Exibe uma mensagem e l\u00EA um n\u00FAmero inteiro digitado pelo usu\u00E1rio.\r\n\r\n @param  mensagem   texto exibido antes da leitura\r\n @return            o n\u00FAmero inteiro digitado\r\n
+comment2.params=mensagem
+comment2.target=java.lang.String leString(java.lang.String)
+comment2.text=\r\n Exibe uma mensagem e l\u00EA uma linha de texto digitada pelo usu\u00E1rio.\r\n\r\n @param  mensagem   texto exibido antes da leitura\r\n @return            o texto digitado\r\n
+numComments=3
