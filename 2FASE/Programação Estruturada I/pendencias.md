@@ -4,9 +4,9 @@ Aula2
  [x]Testar Automovel e Imovel na classe de teste (hoje só Computador é testado)
 Aula2.1 / Aula2.2 (Pessoa + Data)
 
- []Corrigir getDataNascimento() — retorna nome em vez de dataNascimento
- []Corrigir exibeInformacoes() — chamar dataNascimento.exibeData() em vez de imprimir o objeto direto
- []Decidir se Aula2.1 e Aula2.2 devem continuar duplicadas
+ [x]Corrigir getDataNascimento() — retorna nome em vez de dataNascimento
+ [x]Corrigir exibeInformacoes() — chamar dataNascimento.exibeData() em vez de imprimir o objeto direto
+ [x]Decidir se Aula2.1 e Aula2.2 devem continuar duplicadas
 Parte 02 — Tarefa 2
 
  []Criar classes Paciente e Convenio (não existem ainda)

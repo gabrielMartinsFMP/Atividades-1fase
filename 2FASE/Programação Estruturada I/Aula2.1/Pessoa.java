@@ -25,7 +25,7 @@ public class Pessoa
         this.nome = nome;
     }
 
-     public String getDataNascimento()
+     public Data getDataNascimento()
     {
         return dataNascimento;
     }
@@ -38,6 +38,7 @@ public class Pessoa
     public void exibeInformacoes()
     {
         System.out.println("O nome da pessoa é " + nome);
-        System.out.println("Data de nascimento: " + dataNascimento);
+        System.out.print("Data de nascimento: ");
+        dataNascimento.exibeData();
     }
 }
